@@ -545,6 +545,24 @@
       margin: 0 0 10px;
     }
 
+    /* 折疊區內沿用時間軸的交通段樣式（.ln 標籤 + 車資） */
+    details.fold .fold-body .go {
+      display: block;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      font-family: var(--mono);
+      margin-top: 5px;
+    }
+
+    details.fold .fold-body .go+.go {
+      margin-top: 2px;
+    }
+
+    details.fold .fold-body .go .fare {
+      color: var(--indigo-deep);
+      font-weight: 700;
+    }
+
     /* ---------- floating jump nav ---------- */
     #jumpnav {
       position: fixed;
@@ -786,7 +804,7 @@
           <li><span class="time">10:25</span><span class="what"><strong>關西機場 (KIX) 抵達</strong>（虎航）</span></li>
           <li><span class="time">～11:55</span><span class="what"><strong>入境＋購票（預留約 1.5 小時）</strong><span class="hrs">排隊入境 · 加購 <strong>3 張 ICOCA</strong>（已有 2 張、共 5 人份）· 辦 WEST QR HARUKA</span></span></li>
           <li><span class="time">12:10</span><span class="what"><strong>HARUKA 特急 → 約 13:30 抵京都</strong>，到飯店寄放行李<span class="hrs">抵達 → 京都約需 <strong>3 小時</strong>（入境＋購票＋乘車）</span><span class="go"><span class="ln" style="background:#123E66">HARUKA特急</span>関西空港→京都　<span class="fare">$2,200</span>（WEST QR 優惠；自由席 $3,110）　約78m</span></span></li>
-          <li><span class="time">15:00</span><span class="what"><strong>嵐山：渡月橋・竹林小徑・天龍寺庭園</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=渡月橋" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🎋 風景</span><span class="hrs">渡月橋・竹林 24h 免費 · 天龍寺庭園 8:30–17:00（最終受付 16:50）、¥500 · 15:00 到仍可賞渡月橋＋竹林；天龍寺庭園請 16:50 前入場</span><span class="food">🍡 名物：湯豆腐、抹茶冰淇淋、生八橋</span><span class="go"><span class="ln" style="background:#E38200">JR嵯峨野線</span>京都→嵯峨嵐山　<span class="fare">$240</span>　約16m</span></span></li>
+          <li><span class="time">15:00</span><span class="what"><strong>嵐山：渡月橋・竹林小徑・天龍寺庭園</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=渡月橋" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🎋 風景</span><span class="hrs">渡月橋・竹林 24h 免費 · 天龍寺庭園 8:30–17:00（最終受付 16:50）、¥500 · <strong>建議順序（自 JR 嵯峨嵐山站南下的自然動線）：先天龍寺庭園（趕 16:50 前入場）→ 北門外竹林小徑（來回）→ 折返沿嵐山大街（長辻通商店街，邊走邊吃）南下 → 渡月橋（最南）</strong></span><span class="food">🍡 名物：湯豆腐、抹茶冰淇淋、生八橋</span><span class="go"><span class="ln" style="background:#E38200">JR嵯峨野線</span>京都→嵯峨嵐山　<span class="fare">$240</span>　約16m</span></span></li>
           <li><span class="time">晚餐</span><span class="what"><strong>かに道楽 京都本店（三条寺町）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=かに道楽 京都本店" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span class="tag-sea">🦀 螃蟹</span><span class="hrs">11:00–22:00（最終入店 21:00）· 地下鐵東西線「市役所前」步行 3 分</span><span class="go"><span class="ln" style="background:#E38200">JR嵯峨野線</span>嵯峨嵐山→京都　<span class="fare">$240</span>　16m　➡️ </span><span class="go"><span class="ln" style="background:#009A44">地下鐵烏丸線</span>京都→烏丸御池　➡️ </span><span class="go"><span class="ln" style="background:#C1440E">東西線</span>烏丸御池→市役所前　<span class="fare">$260</span>　約12m（步行 3 分到店）</span></span></li>
         </ul>
         <div class="note">HARUKA 由機場直達京都、全程免換乘、對號座可放大行李，是機場進京都對長輩最省力的路線。</div>
@@ -839,16 +857,15 @@
         <div class="day-head">
           <div class="day-no">03<span>Day Three</span></div>
           <div class="day-title">
-            <h3>自駕・三千院・白鬚神社・水杉並木・浮御堂<span class="badge b-drive">自駕</span></h3>
+            <h3>自駕・白鬚神社・水杉並木・浮御堂<span class="badge b-drive">自駕</span></h3>
             <div class="date">10/8（週四）· 京都站取車 · 車停京都、住京都</div>
           </div>
         </div>
         <ul class="tl">
           <li><span class="time">08:30</span><span class="what"><strong>京都站前取車</strong>（自排小車 + ETC，租至 Day 4 大阪還）</span></li>
-          <li><span class="time">09:15</span><span class="what"><strong>三千院（大原）</strong><a class="gmap" href="https://maps.app.goo.gl/pYgjDYxMbMeveUKK8" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🍃 苔庭古剎</span><span class="hrs">9:00–17:00（11 月 8:30–17:00、12–2 月 9:00–16:30）· ¥700 · 大原山間天台宗古剎，聚碧園・有清園苔庭、往生極樂院、わらべ地藏超療癒 · 大原有料停車場約 ¥400–500（沿參道步行約 10 分）</span><span class="food">🍢 名物：大原志ば漬（紫蘇漬物）、湯葉、栗子甜點</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>京都站→大原（國道367 鯖街道）　約45m</span></span></li>
-          <li><span class="time">10:45</span><span class="what"><strong>浮御堂（滿月寺・堅田）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=浮御堂 満月寺" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🛶 湖上佛堂</span><span class="hrs">8:00–17:00 · ¥300 · 近江八景「堅田落雁」、佇立琵琶湖上的湖中佛堂，免費參拜停車場</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>大原→堅田（途中越／國道477・湖西道路）　約30m</span></span></li>
-          <li><span class="time">11:45</span><span class="what"><strong>白鬚神社（高島）</strong><a class="gmap" href="https://maps.app.goo.gl/bAMB5FyTqaQw2Mzs6" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">⛩ 湖中鳥居</span><span class="hrs">境內免費、社務所 9:00–17:00 · 免費停車約 30 台 · 「近江的嚴島」湖中大鳥居，晴天倒影絕美</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>堅田→高島（國道161 北上）　約30m</span></span></li>
-          <li><span class="time">13:00</span><span class="what">午餐：高島／マキノ（近江牛、鴨料理、鯖壽司）</span></li>
+          <li><span class="time">09:30</span><span class="what"><strong>浮御堂（滿月寺・堅田）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=浮御堂 満月寺" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🛶 湖上佛堂</span><span class="hrs">8:00–17:00 · ¥300 · 近江八景「堅田落雁」、佇立琵琶湖上的湖中佛堂，免費參拜停車場</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>京都站→堅田（湖西道路／國道161）　約30m</span></span></li>
+          <li><span class="time">11:00</span><span class="what"><strong>白鬚神社（高島）</strong><a class="gmap" href="https://maps.app.goo.gl/bAMB5FyTqaQw2Mzs6" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">⛩ 湖中鳥居</span><span class="hrs">境內免費、社務所 9:00–17:00 · 免費停車約 30 台 · 「近江的嚴島」湖中大鳥居，晴天倒影絕美</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>堅田→高島（國道161 北上）　約30m</span></span></li>
+          <li><span class="time">12:30</span><span class="what">午餐：高島／マキノ（近江牛、鴨料理、鯖壽司）</span></li>
           <li><span class="time">14:00</span><span class="what"><strong>メタセコイア並木（マキノ）</strong><a class="gmap" href="https://maps.app.goo.gl/ogXvMPtV6bfoBAh46" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🌲 水杉大道</span><span class="hrs">約 2.4km、500 棵水杉隧道、免費 · マキノピックランド免費停車 · 10 月為翠綠（紅葉見頃 11 月下旬–12 月上旬）</span><span class="food">🍇 名物：マキノピックランド當季採果、栗子、在地水果</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>白鬚→マキノ（國道161 北上）　約30m</span></span></li>
           <li><span class="time">傍晚</span><span class="what">回京都住宿（車停飯店停車場）· 晚餐：四条河原町・先斗町（鴨川旁料亭）或京都駅ビル 10F 拉麵小路<span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>マキノ→京都（國道161／湖西道路南下）　約90m</span></span></li>
         </ul>
@@ -856,6 +873,18 @@
             161</strong>，附近無斑馬線與號誌，官方<strong>明確禁止橫越</strong>（過去 10 年 19 件事故、含 1
           死）。拍湖中鳥居請一律使用<strong>社務所前的展望台「藍湖白鬚台」</strong>，切勿穿越馬路。</div>
         <div class="note indigo">（不自駕的參考）JR 湖西線新快速：京都→近江高島 $860／37m（白鬚）、京都→堅田 $410／22m（浮御堂）、京都→マキノ $1,170／約70–95m。但三點分散、班次疏，仍以自駕最順。</div>
+        <details class="fold">
+          <summary>備案加碼：三千院（大原）— 想多跑一站再看</summary>
+          <div class="fold-body">
+            <p style="margin-top:6px;"><strong>三千院（大原）</strong><a class="gmap" href="https://maps.app.goo.gl/pYgjDYxMbMeveUKK8" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　🍃 苔庭古剎</p>
+            <p><strong>位置：</strong>京都市左京區<strong>大原</strong>（市區東北山間），不在琵琶湖三站的直線上，但可經<strong>途中越（國道 367→477）</strong>接堅田順路串起來。</p>
+            <p><strong>適合擺放時間：</strong>若要加，建議當<strong>當日第一站</strong>——<strong>08:00 京都站取車 → 大原 09:00–10:15</strong>（開門 9:00、停約 1 小時）→ 再接 <strong>10:45 浮御堂</strong> → 白鬚 → 午餐 → 水杉，整日順序不變、只是提早出發。</p>
+            <span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>京都站→大原（國道367 鯖街道）　約45m　➡️ </span>
+            <span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>大原→堅田（途中越／國道477）　約30m（接主行程浮御堂）</span>
+            <p style="margin-top:12px;"><strong>提醒：</strong>加了這站整日會變五站＋單程 90 分回程、對長輩偏滿，<strong>時間吃緊就略過</strong>。營業：9:00–17:00（11 月 8:30–17:00、12–2 月 9:00–16:30）· ¥700 · 聚碧園・有清園苔庭、往生極樂院、わらべ地藏。</p>
+            <p><strong>10 月花況：</strong>紅葉見頃約 11 月中下旬–12 月上旬，10 月初<strong>尚未轉紅</strong>；當季以<strong>青翠杉苔庭</strong>為主，另有<strong>秋海棠（8–10 月）</strong>尾聲。🍢 名物：大原志ば漬、湯葉、栗子甜點。</p>
+          </div>
+        </details>
         <div class="photos">
           <figure><img loading="lazy" src="https://tw.wamazing.com/media/wp-content/uploads/sites/4/2024/03/shirahigejinjya_pixta_72907951_M.jpg.webp" alt="白鬚神社 湖中鳥居"><figcaption>白鬚神社・湖中鳥居</figcaption></figure>
           <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/A_row_of_Metasequoia_trees_Makino_20200919.jpg/1280px-A_row_of_Metasequoia_trees_Makino_20200919.jpg" alt="メタセコイア並木"><figcaption>水杉並木（マキノ）</figcaption></figure>
@@ -931,8 +960,8 @@
         <ul class="tl">
           <li><span class="time">09:00</span><span class="what"><strong>黑門市場</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=黒門市場" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span class="tag-sea">🐟 黑鮪魚腹・生魚片</span><span class="hrs">約 9:00–18:00 · 難波旁（日本橋站 10 號出口）· 現切黑鮪魚腹、和牛串、海膽、玉子燒、水果，坐著吃</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>難波→黑門　約8m（或 <span class="ln" style="background:#E85298">地下鐵千日前線</span>難波→日本橋 <span class="fare">$190</span> 2m）</span></span></li>
           <li><span class="time">10:30</span><span class="what"><strong>心齋橋筋・道頓堀</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=心斎橋筋商店街" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>（累或時間不夠可捨）<span class="hrs">有頂棚拱廊平坦好走 · 固力果招牌、道頓堀運河</span><span class="food">🛍 伴手禮：藥妝・化妝品、和菓子、宇治茶</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>黑門→心齋橋・道頓堀　約8m</span></span></li>
-          <li><span class="time">11:30</span><span class="what"><strong>住吉大社</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=住吉大社" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a><span class="hrs">6:30–17:00、免費 · 南海「住吉大社」站即到 · 太鼓橋地標（旁有平緩繞道，免爬階）· 往機場方向順路</span><span class="go"><span class="ln" style="background:#004098">南海本線</span>難波→住吉大社（普通）　<span class="fare">$240</span>　9m</span></span></li>
-          <li><span class="time">13:30</span><span class="what"><strong>臨空城 Outlet（りんくうプレミアム・アウトレット）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=りんくうプレミアムアウトレット" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--indigo);font-weight:700;">🛍 購物</span><span class="hrs">10:00–20:00 · 約 250 家店、海濱可眺關空聯絡橋 · 「臨空城」站步行 6 分 · 離關空僅一站</span><span class="go"><span class="ln" style="background:#004098">南海本線</span>住吉大社→りんくうタウン（空港急行）　<span class="fare">約$720</span>　約33m</span></span></li>
+          <li><span class="time">11:30</span><span class="what"><strong>住吉大社</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=住吉大社" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a><span class="hrs">6:30–17:00、免費 · 南海「住吉大社」站即到 · 太鼓橋地標（旁有平緩繞道，免爬階）· 往機場方向順路</span><span class="food">🍡 輕食：黑門 9 點已吃、這裡不用正餐；參道／門前有茶屋、和菓子小攤（如住吉名物さつま焼、御手洗糰子）可墊胃</span><span class="go"><span class="ln" style="background:#004098">南海本線</span>難波→住吉大社（普通）　<span class="fare">$240</span>　9m</span></span></li>
+          <li><span class="time">13:30</span><span class="what"><strong>臨空城 Outlet（りんくうプレミアム・アウトレット）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=りんくうプレミアムアウトレット" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--indigo);font-weight:700;">🛍 購物</span><span class="hrs">10:00–20:00 · 約 250 家店、海濱可眺關空聯絡橋 · 「臨空城」站步行 6 分 · 離關空僅一站</span><span class="food">🍽 正餐：Outlet 內有美食街／餐廳，逛街時順道午晚餐（約 14:00 用餐、機場前吃飽）</span><span class="go"><span class="ln" style="background:#004098">南海本線</span>住吉大社→りんくうタウン（空港急行）　<span class="fare">約$720</span>　約33m</span></span></li>
           <li><span class="time">16:15</span><span class="what"><strong>臨空城 → 關西機場</strong>（約 16:50 到，<strong>起飛前約 3 小時</strong>），報到、安檢<span class="hrs">虎航 19:50 起飛 · 保險起見提早 3 小時到機場；報到後可逛<strong>關空免稅店買伴手禮</strong>再登機</span><span class="go"><span class="ln" style="background:#0089CF">南海機場線</span>りんくうタウン→関西空港　<span class="fare">$370</span>　6m</span></span></li>
         </ul>
         <div class="note">
@@ -1057,8 +1086,8 @@
             <tr>
               <td><strong>苔庭古剎</strong> 🍃</td>
               <td>三千院（大原）</td>
-              <td>常綠苔庭、わらべ地藏（紅葉 11 月中下旬）</td>
-              <td>Day 3</td>
+              <td>青翠苔庭、秋海棠尾聲、わらべ地藏（紅葉 11 月中下旬）</td>
+              <td>Day 3（備案）</td>
             </tr>
             <tr>
               <td><strong>竹林</strong> 🎋</td>

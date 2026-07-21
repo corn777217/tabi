@@ -1,0 +1,52 @@
+{
+  "更新日期": "2026/07/21",
+  "專案名稱": "旅行行程集 (Travel Journal / 旅の記録)",
+  "專案類型": "純靜態網站 (static HTML)，無建置工具、無後端、無資料庫",
+  "部署方式": "GitHub Pages，發佈根目錄為 docs/",
+  "技術棧": {
+    "語言": "HTML5 + 內嵌 CSS（無外部 CSS/JS 檔）",
+    "框架": "無（vanilla，無 build step）",
+    "外部資源": "景點圖片以外部圖床 <img src> 外連（Wikimedia Commons、WAMAZING、CloudFront、googleusercontent、tabelog、graceblog）"
+  },
+  "目錄結構": {
+    "docs/": "GitHub Pages 網站根目錄（發佈用）",
+    "docs/index.html": "網站首頁；行程列表卡片，連往各趟行程",
+    "docs/kansai-2026/index.html": "京阪神秋日 6天5夜行程主頁（本專案核心頁面）",
+    "kansai-2026/": "行程原始素材（Markdown，非發佈內容）",
+    "kansai-2026/京阪神秋日行程.md": "行程草稿 markdown",
+    "kansai-2026/需求.md": "使用者原始需求與變更彙整（規劃約束來源）",
+    "ai-reference/": "AI 分析用的專案結構與工程事實資料"
+  },
+  "核心檔案": {
+    "docs/kansai-2026/index.html": {
+      "說明": "主要且唯一具邏輯的頁面，所有行程內容集中於此",
+      "頁面結構區塊": [
+        "header.masthead（標題、meta chips）",
+        "行前必讀（動線、住宿、票券、自駕）",
+        "機票/住宿/租車（details.fold 折疊）",
+        "每日行程 每日一個 div.day#day1..#day6（ul.tl 時間軸）",
+        "各地名產伴手禮速查表",
+        "10月花季與風景表",
+        "費用概估表",
+        "票券建議表",
+        "長輩友善提醒",
+        "footer + 浮動 jumpnav"
+      ],
+      "重要 CSS class": {
+        ".tl / .tl .time / .tl .what": "每日時間軸；.time 為時段、.what 為內容",
+        ".hrs": "營業時間/備註行",
+        ".food": "美食名物行",
+        ".go / .ln / .fare": "交通段（路線色標、車資）",
+        ".note / .note.warn / .note.indigo": "提醒方塊",
+        "details.fold": "折疊備案區塊",
+        "a.gmap": "紅色地標 Google Map 連結（背景 SVG pin）",
+        ".photos / .photos figure / figcaption": "每日底部景點相片牆"
+      }
+    }
+  },
+  "無適用項目": {
+    "API_endpoint": "無（純靜態）",
+    "DB_table_queue": "無",
+    "測試": "無自動化測試"
+  }
+}
