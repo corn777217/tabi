@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>京阪神秋日・京都・琵琶湖・神戶行程</title>
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0
+    }
+  </style>
+</head>
+
+<body>
+  <style>
+    :root {
+      --paper: #EFF0EA;
+      --paper-2: #F7F7F2;
+      --ink: #1B232C;
+      --ink-soft: #41505E;
+      --indigo: #24486B;
+      --indigo-deep: #16304A;
+      --persimmon: #C0532B;
+      --straw: #9A7B2E;
+      --line: #D2D4CB;
+      --line-soft: #E1E2DA;
+      --good: #3E6E4B;
+      --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Hiragino Sans", system-ui, sans-serif;
+      --serif: "Noto Serif TC", "Songti TC", "Yu Mincho", "Hiragino Mincho ProN", "MingLiU", serif;
+      --mono: "SF Mono", "JetBrains Mono", "Consolas", "Menlo", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 0 22px 96px;
+    }
+
+    /* ---------- header ---------- */
+    header.masthead {
+      padding: 60px 0 34px;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .eyebrow {
+      font-size: 12.5px;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+      color: var(--persimmon);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(34px, 6.2vw, 58px);
+      line-height: 1.12;
+      letter-spacing: .01em;
+      text-wrap: balance;
+      margin: 0 0 6px;
+      color: var(--indigo-deep);
+    }
+
+    h1 .sub {
+      display: block;
+      font-size: clamp(16px, 2.6vw, 21px);
+      color: var(--ink-soft);
+      font-weight: 500;
+      letter-spacing: .02em;
+      margin-top: 14px;
+      font-family: var(--sans);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .chip {
+      font-size: 13px;
+      padding: 6px 13px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      background: var(--paper-2);
+      color: var(--ink-soft);
+    }
+
+    .chip strong {
+      color: var(--indigo);
+      font-weight: 700;
+    }
+
+    /* ---------- section frame ---------- */
+    section.block {
+      margin-top: 52px;
+    }
+
+    .kicker {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .kicker .num {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--persimmon);
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    .kicker h2 {
+      font-family: var(--serif);
+      font-size: clamp(21px, 3.4vw, 27px);
+      font-weight: 700;
+      color: var(--indigo-deep);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .kicker .rule {
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+      align-self: center;
+    }
+
+    p {
+      margin: 0 0 14px;
+      /* max-width: 66ch; */
+    }
+
+    .lead {
+      color: var(--ink-soft);
+    }
+
+    a {
+      color: var(--indigo);
+      text-underline-offset: 3px;
+    }
+
+    /* ---------- tables ---------- */
+    .twrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: var(--paper-2);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 14.5px;
+      min-width: 520px;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+    }
+
+    thead th {
+      background: var(--indigo-deep);
+      color: #EFF0EA;
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border-bottom: none;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(36, 72, 107, .035);
+    }
+
+    .num,
+    .yen {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .yen {
+      font-weight: 600;
+      color: var(--indigo-deep);
+    }
+
+    td small {
+      color: var(--ink-soft);
+    }
+
+    /* ---------- day cards ---------- */
+    .day {
+      margin-top: 30px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 16px;
+    }
+
+    #info,
+    #note,
+    #product {
+      scroll-margin-top: 16px;
+    }
+
+    .day-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .day-no {
+      font-family: var(--serif);
+      font-size: 46px;
+      font-weight: 700;
+      line-height: .9;
+      color: var(--indigo);
+      min-width: 96px;
+    }
+
+    .day-no span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: .12em;
+      color: var(--persimmon);
+      font-weight: 700;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+
+    .day-title {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .day-title h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 4px;
+      color: var(--ink);
+    }
+
+    .day-title .date {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .b-city {
+      background: rgba(36, 72, 107, .12);
+      color: var(--indigo-deep);
+    }
+
+    .b-drive {
+      background: rgba(154, 123, 46, .16);
+      color: var(--straw);
+    }
+
+    .b-onsen {
+      background: rgba(192, 83, 43, .13);
+      color: var(--persimmon);
+    }
+
+    /* timeline */
+    .tl {
+      list-style: none;
+      margin: 0 0 22px;
+      padding: 0;
+    }
+
+    .tl li {
+      display: flex;
+      gap: 16px;
+      padding: 11px 0;
+      border-bottom: 1px dashed var(--line-soft);
+    }
+
+    .tl li:last-child {
+      border-bottom: none;
+    }
+
+    .tl .time {
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+      color: var(--indigo);
+      min-width: 58px;
+      font-size: 14px;
+    }
+
+    .tl .what {
+      flex: 1;
+    }
+
+    .tl .what strong {
+      color: var(--ink);
+    }
+
+    .tl .what .hrs {
+      display: block;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      margin-top: 1px;
+    }
+
+    .tl .what .food {
+      display: block;
+      font-size: 12.5px;
+      color: var(--straw);
+      margin-top: 2px;
+    }
+
+    /* per-spot transport line + rail-line colour tag */
+    .tl .what .go {
+      display: block;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      font-family: var(--mono);
+      margin-top: 5px;
+    }
+
+    .tl .what .go+.go {
+      margin-top: 2px;
+    }
+
+    .tl .what .go .fare {
+      color: var(--indigo-deep);
+      font-weight: 700;
+    }
+
+    .ln {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.6;
+      color: #fff;
+      padding: 0 7px;
+      border-radius: 10px;
+      margin-right: 6px;
+      vertical-align: 1px;
+      white-space: nowrap;
+    }
+
+    .tag-sea {
+      color: var(--persimmon);
+      font-weight: 700;
+    }
+
+    .sub-h {
+      font-size: 12.5px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 700;
+      margin: 18px 0 9px;
+    }
+
+    .note {
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--persimmon);
+      padding: 14px 18px;
+      border-radius: 2px;
+      margin: 16px 0;
+      font-size: 14.5px;
+    }
+
+    .note strong {
+      color: var(--persimmon);
+    }
+
+    .note.indigo {
+      border-left-color: var(--indigo);
+    }
+
+    .note.indigo strong {
+      color: var(--indigo);
+    }
+
+    .note.warn {
+      border-left-color: #B23A3A;
+    }
+
+    .note.warn strong {
+      color: #B23A3A;
+    }
+
+    ul.plain {
+      margin: 0 0 14px;
+      padding-left: 20px;
+    }
+
+    ul.plain li {
+      margin-bottom: 8px;
+    }
+
+    ul.plain .go {
+      display: block;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      font-family: var(--mono);
+      margin-top: 3px;
+    }
+
+    /* ---------- collapsible fold (info / fallback) ---------- */
+    details.fold {
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: var(--paper-2);
+      margin: 16px 0;
+      padding: 0 18px;
+    }
+
+    details.fold[open] {
+      padding-bottom: 14px;
+    }
+
+    details.fold>summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 14px 0;
+      font-weight: 700;
+      color: var(--indigo-deep);
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    details.fold>summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.fold>summary::before {
+      content: "▸";
+      color: var(--persimmon);
+      transition: transform .2s;
+    }
+
+    details.fold[open]>summary::before {
+      transform: rotate(90deg);
+    }
+
+    details.fold .fold-body {
+      font-size: 14.5px;
+      color: var(--ink-soft);
+    }
+
+    details.fold .fold-body p {
+      margin: 0 0 10px;
+    }
+
+    /* ---------- floating jump nav ---------- */
+    #jumpnav {
+      position: fixed;
+      right: 14px;
+      bottom: 18px;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      align-items: center;
+    }
+
+    #jumpnav a {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      background: var(--paper-2);
+      color: var(--indigo-deep);
+      border: 1px solid var(--line);
+      box-shadow: 0 2px 6px rgba(27, 35, 44, .14);
+    }
+
+    #jumpnav a:hover {
+      background: var(--indigo-deep);
+      color: var(--paper);
+    }
+
+    #jumpnav a.jn-top {
+      background: var(--persimmon);
+      color: #fff;
+      border-color: var(--persimmon);
+      font-size: 16px;
+    }
+
+    @media(max-width:560px) {
+      #jumpnav a {
+        width: 32px;
+        height: 32px;
+        font-size: 12.5px;
+      }
+
+      #jumpnav {
+        right: 8px;
+        bottom: 10px;
+        gap: 5px;
+      }
+    }
+
+    .foot {
+      margin-top: 60px;
+      padding-top: 22px;
+      border-top: 2px solid var(--ink);
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    @media(max-width:560px) {
+      .day-no {
+        min-width: auto;
+        font-size: 38px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+    }
+  </style>
+
+  <div class="wrap" id="top">
+
+    <header class="masthead">
+      <div class="eyebrow">Kansai · Autumn 2026 · 長輩友善行程</div>
+      <h1>京阪神秋日<br>京都・琵琶湖・神戶<span class="sub">京都 × 琵琶湖・箕面（近郊自駕）× 神戶 × 末日大阪臨空城 Outlet　6 天 5 夜</span></h1>
+      <div class="meta-row">
+        <span class="chip"><strong>日期</strong>　10/6（二）–10/11（日）　6 天 5 夜</span>
+        <span class="chip"><strong>班機</strong>　去 10/6 抵 10:25／回 10/11 起 19:50（虎航）</span>
+        <span class="chip"><strong>住宿</strong>　兩處：京都（四条烏丸／京都站）×3 + 難波 ×2</span>
+        <span class="chip"><strong>對象</strong>　家庭旅遊包含長輩、少搭巴士</span>
+        <span class="chip"><strong>亮點</strong>　白鬚神社湖中鳥居 · 水杉並木 · 勝尾寺達摩 · 明石海峽大橋 · 神戶牛 · 黑門鮪魚腹</span>
+      </div>
+    </header>
+
+    <!-- ============ 行前重點 ============ -->
+    <section class="block">
+      <div class="kicker"><span class="num">序</span>
+        <h2>行前必讀：動線、住宿、票券、自駕</h2><span class="rule"></span>
+      </div>
+      <p class="lead">
+        <strong>動線：</strong>第一天直奔京都，主玩<strong>京都（含琵琶湖、箕面近郊自駕）＋神戶</strong>；大阪不排整天觀光，只在最後一天上午順遊＋下午逛<strong>臨空城
+          Outlet</strong>後直奔關空。全程<strong>只住兩家飯店</strong>，帶長輩與行李不必反覆換宿。</p>
+      <p class="lead"><strong>住宿規劃：</strong>京都 3 晚選<strong>四条烏丸或京都車站一帶</strong>（走路到錦市場／新京極、地鐵一站、京都站前取車都方便）；後 2
+        晚住<strong>難波</strong>（近黑門、道頓堀，南海線直達關空）。</p>
+
+      <div class="note indigo">
+        <strong>票券更正（2026 最新）：</strong>舊「ICOCA &amp; HARUKA」套票<strong>已停售</strong>，改為 JR 西日本官方電子優惠單程票「<strong>WEST QR
+          HARUKA</strong>」——關空→京都單程 <strong>¥2,200</strong>（線上購買、掃 QR 進站）；或現場購 HARUKA <strong>自由席 ¥3,110／指定席
+          ¥3,640</strong>（HARUKA 仍有自由席，5–7 號車）。市內交通全程用 <strong>ICOCA</strong> 嗶卡。<strong>本行程用量低、兩天自駕，不需買任何一日券</strong>（詳見文末）。
+      </div>
+
+      <div class="note">
+        <strong>⚠️ 自駕證件（台灣籍務必注意）：</strong>日本<strong>不承認</strong>國際駕照 (IDP)。台灣駕照需先辦「<strong>駕照日文譯本</strong>」（監理站或 JAF，約
+        NT$100 / ¥3,000），出示「台灣駕照正本 + 日文譯本 + 護照」三者才能租車。<br />
+        租車建議加保全險 (CDW)。<br />
+        <strong>Day 3–4</strong>
+        京都站取車、大阪（難波／新大阪）還車（異地還車乗り捨て料金 ¥5,500 含稅）。
+      </div>
+
+      <div class="note">
+        <strong>交通格式說明：</strong>每段乘車方式標在<strong>該景點下方</strong>，格式為
+        <span style="font-family:var(--mono)">〔路線色標〕 起→訖　$車資　時間</span>（車資為大人單程日圓、時間為約略乘車分，m＝分）。<br />
+        路線標籤<strong>依日本鐵道各線代表色上色</strong>，例：
+        <span class="ln" style="background:#009A44">地下鐵烏丸線</span>京都→四条　<span style="color:var(--indigo-deep);font-weight:700;">$220</span>　3m。<br />
+        <strong>需轉乘時</strong>，該段結尾標 <strong style="color:var(--indigo-deep)">➡️ </strong>，下一段路線<strong>另起一行</strong>顯示；步行段以「步行」標籤標示。
+      </div>
+    </section>
+
+    <!-- ============ 機票與住宿（可折疊，預設收合） ============ -->
+    <section class="block" id="info">
+      <details class="fold">
+        <summary>✈🚗 機票・住宿・租車詳細資訊（點此展開／收合・部分待確認）</summary>
+        <div class="fold-body">
+          <p class="sub-h" style="margin-top:6px;">機票（虎航 Tigerair）</p>
+          <div class="twrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>航段</th>
+                  <th>日期</th>
+                  <th>時間</th>
+                  <th>備註</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>去程 TPE → KIX</td>
+                  <td>10/6（二）</td>
+                  <td>06:40 → 10:25</td>
+                  <td>抵達後預留約 1.5h 入境＋購票</td>
+                </tr>
+                <tr>
+                  <td>回程 KIX → TPE</td>
+                  <td>10/11（日）</td>
+                  <td>19:50 → 21:45</td>
+                  <td>起飛前 3 小時、約 16:50 到關空</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sub-h">住宿（待確認）</p>
+          <div class="twrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>晚別</th>
+                  <th>地區</th>
+                  <th>飯店 / 房型</th>
+                  <th>備註</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10/6–10/8（3 晚）</td>
+                  <td>京都(四条烏丸／京都站)</td>
+                  <td>— 待確認 —</td>
+                  <td>近商店街、取車方便</td>
+                </tr>
+                <tr>
+                  <td>10/9–10/10（2 晚）</td>
+                  <td>大阪 難波</td>
+                  <td>— 待確認 —</td>
+                  <td>近黑門・道頓堀、南海直達關空</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:13px;color:var(--ink-soft);margin-top:4px;">＊同行：長輩（55–60）2 人＋成人 2–3 人、無學生；ICOCA 已有 2 張，需加購
+            3 張。訂房代號、地址、入退房時間等確定後再補。</p>
+
+          <p class="sub-h">租車（TOYOTA Rent a Car・京都站取、難波還）</p>
+          <div class="twrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>車種</th>
+                  <th>完整套餐<br><small>含 ETC ¥550＋雙重保險 ¥1,650×2日</small></th>
+                  <th>異地還車<br><small>京都→大阪・含稅</small></th>
+                  <th>高速/油<br><small>估算</small></th>
+                  <th>車輛合計</th>
+                  <th>÷5 人／每人</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>W2（8 座・建議）</strong></td>
+                  <td class="yen">¥49,830</td>
+                  <td class="yen">¥5,500</td>
+                  <td class="yen">約 ¥8,000</td>
+                  <td class="yen">約 ¥63,330</td>
+                  <td class="yen">約 ¥12,700</td>
+                </tr>
+                <tr>
+                  <td>SUV3（5 座）</td>
+                  <td class="yen">¥55,880</td>
+                  <td class="yen">¥5,500</td>
+                  <td class="yen">約 ¥8,000</td>
+                  <td class="yen">約 ¥69,380</td>
+                  <td class="yen">約 ¥13,900</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:13px;color:var(--ink-soft);margin-top:4px;">＊完整套餐已含 ETC 卡租借 ¥550 ＋ 雙重保險（免責＋NOC）¥1,650×2 日。<strong>建議選 W2（8 座）</strong>：較便宜，且 5 位成人＋3×29吋＋1×24吋行李放得下（5 座 SUV 恐塞不下）。高速/油為估算（Day4 高速約 ¥3,000＋油約 ¥5,000；Day3 湖西道路多免費）。JAF 不需另辦。</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ============ 每日行程 ============ -->
+    <section class="block">
+      <div class="kicker"><span class="num">程</span>
+        <h2>每日行程</h2><span class="rule"></span>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day" id="day1">
+        <div class="day-head">
+          <div class="day-no">01<span>Day One</span></div>
+          <div class="day-title">
+            <h3>抵達・嵐山・京都駅周邊<span class="badge b-city">京都</span></h3>
+            <div class="date">10/6（週二）· 住京都（四条烏丸／京都站）</div>
+          </div>
+        </div>
+        <ul class="tl">
+          <li><span class="time">10:25</span><span class="what"><strong>關西機場 (KIX) 抵達</strong>（虎航）</span></li>
+          <li><span class="time">～11:55</span><span class="what"><strong>入境＋購票（預留約 1.5 小時）</strong><span class="hrs">排隊入境 · 加購 <strong>3 張 ICOCA</strong>（已有 2 張、共 5 人份）· 辦 WEST QR HARUKA</span></span></li>
+          <li><span class="time">12:10</span><span class="what"><strong>HARUKA 特急 → 約 13:30 抵京都</strong>，到飯店寄放行李<span class="hrs">抵達 → 京都約需 <strong>3 小時</strong>（入境＋購票＋乘車）</span><span class="go"><span class="ln" style="background:#123E66">HARUKA特急</span>関西空港→京都　<span class="fare">$2,200</span>（WEST QR 優惠；自由席 $3,110）　約78m</span></span></li>
+          <li><span class="time">15:00</span><span class="what"><strong>嵐山：渡月橋・竹林小徑・天龍寺庭園</strong>　<span style="color:var(--good);font-weight:700;">🎋 風景</span><span class="hrs">渡月橋・竹林 24h 免費 · 天龍寺庭園 8:30–17:00（最終受付 16:50）、¥500 · 15:00 到仍可賞渡月橋＋竹林；天龍寺庭園請 16:50 前入場</span><span class="food">🍡 名物：湯豆腐、抹茶冰淇淋、生八橋</span><span class="go"><span class="ln" style="background:#E38200">JR嵯峨野線</span>京都→嵯峨嵐山　<span class="fare">$240</span>　約16m</span></span></li>
+          <li><span class="time">晚餐</span><span class="what"><strong>かに道楽 京都本店（三条寺町）</strong>　<span class="tag-sea">🦀 螃蟹</span><span class="hrs">11:00–22:00（最終入店 21:00）· 地下鐵東西線「市役所前」步行 3 分</span><span class="go"><span class="ln" style="background:#E38200">JR嵯峨野線</span>嵯峨嵐山→京都　<span class="fare">$240</span>　16m　➡️ </span><span class="go"><span class="ln" style="background:#009A44">地下鐵烏丸線</span>京都→烏丸御池　➡️ </span><span class="go"><span class="ln" style="background:#C1440E">東西線</span>烏丸御池→市役所前　<span class="fare">$260</span>　約12m（步行 3 分到店）</span></span></li>
+        </ul>
+        <div class="note">HARUKA 由機場直達京都、全程免換乘、對號座可放大行李，是機場進京都對長輩最省力的路線。</div>
+        <details class="fold">
+          <summary>備案：若入境購票／HARUKA 耗時、來不及嵐山</summary>
+          <div class="fold-body">
+            <p>抵京都若已近傍晚，<strong>當天略過嵐山</strong>、改在<strong>京都車站周邊</strong>輕鬆逛（嵐山可移到其他空檔或捨去）：</p>
+            <ul class="plain">
+              <li><strong>京都塔・京都駅ビル</strong>（大階段・空中步道・屋上庭園）<span class="go"><span class="ln" style="background:#7A7A7A">步行</span>京都站直結・站前即到</span></li>
+              <li><strong>伊勢丹</strong>（服飾、B1/B2 食品）、<strong>Yodobashi／Bic Camera</strong>（電器）購物採買<span class="go"><span class="ln" style="background:#7A7A7A">步行</span>京都站前 3–5 分</span></li>
+              <li><strong>東本願寺</strong>（免費）、<strong>東寺</strong>五重塔（世界遺產，庭園 ¥500）<span class="go"><span class="ln" style="background:#7A7A7A">步行</span>京都站→東本願寺 7 分</span><span class="go"><span class="ln" style="background:#B0121A">近鐵京都線</span>京都→東寺　<span class="fare">$180</span>　2m（東寺，或步行 15 分）</span></li>
+              <li>晚餐直接 <strong>かに道楽</strong> 或京都駅ビル 10F 拉麵小路</li>
+            </ul>
+            <p>🛍 伴手禮：京ばあむ、阿闍梨餅、生八橋、抹茶菓子（伊勢丹 B1/B2）。</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day" id="day2">
+        <div class="day-head">
+          <div class="day-no">02<span>Day Two</span></div>
+          <div class="day-title">
+            <h3>錦市場・清水寺・八坂・新京極<span class="badge b-city">市區</span></h3>
+            <div class="date">10/7（週三）· 住京都</div>
+          </div>
+        </div>
+        <ul class="tl">
+          <li><span class="time">10:00</span><span class="what"><strong>錦市場</strong>　<span class="tag-sea">🐟 海鮮・玉子燒</span><span class="hrs">「京都廚房」約 9:00–18:00（各店不一）· 約 390m、400 年歷史</span><span class="food">🍢 名店：三木雞卵（高湯玉子燒 9:00–17:00）、こんなもんじゃ（豆乳甜甜圈）、カリカリ博士（章魚燒 ¥280）、打田漬物（章魚玉子）、櫂（佃煮試吃）</span><span class="go"><span class="ln" style="background:#009A44">地下鐵烏丸線</span>京都→四条　<span class="fare">$220</span>　3m（步行 3 分到錦市場）</span></span></li>
+          <li><span class="time">13:00</span><span class="what">午餐：錦市場或四条一帶</span></li>
+          <li><span class="time">14:00</span><span class="what"><strong>清水寺</strong> + 二年坂・三年坂<span class="hrs">拝観 6:00–18:00 · 門票 ¥500（小中 ¥200）</span><span class="food">🍵 名物：清水燒陶器、生八橋、抹茶甜點、七味唐辛子</span><span class="go"><span class="ln" style="background:#1F7A5A">京阪本線</span>祇園四条→清水五条　<span class="fare">$170</span>　約3m（先步行至祇園四条 約7分）</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>清水五条→清水寺（清水坂上坡，約20分、可慢行休息）</span></span></li>
+          <li><span class="time">16:30</span><span class="what"><strong>八坂神社</strong><span class="hrs">境內 24 小時免費（社務所 9:00–17:00）· 從二三年坂順坡下行接祇園</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>清水寺→八坂神社（二三年坂下坡）　約15m</span></span></li>
+          <li><span class="time">傍晚</span><span class="what"><strong>新京極・寺町商店街</strong><span class="hrs">有頂棚商店街、平坦好走，雨天也 OK · 鄰四条河原町晚餐選擇多</span><span class="food">🛍 特色：生八橋、京都文具・和雜貨、藥妝、佛具念珠（寺町）</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>八坂→新京極／四条河原町　約12m</span><span class="go"><span class="ln" style="background:#009A44">地下鐵烏丸線</span>四条→京都（回飯店）　<span class="fare">$220</span>　3m</span></span></li>
+        </ul>
+        <div class="note">京都公車擁擠又難拖行李，本行程<strong>以電車（京阪）＋步行取代公車與計程車</strong>；清水坂雖為上坡，但沿途店家多、可分段休息，回程走二三年坂一路下坡順逛。（備援：市バス 206 系統「京都駅前→清水道／祇園」約 $230、15–20m。）</div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day" id="day3">
+        <div class="day-head">
+          <div class="day-no">03<span>Day Three</span></div>
+          <div class="day-title">
+            <h3>自駕・白鬚神社・水杉並木・浮御堂<span class="badge b-drive">自駕</span></h3>
+            <div class="date">10/8（週四）· 京都站取車 · 車停京都、住京都</div>
+          </div>
+        </div>
+        <ul class="tl">
+          <li><span class="time">08:30</span><span class="what"><strong>京都站前取車</strong>（自排小車 + ETC，租至 Day 4 大阪還）</span></li>
+          <li><span class="time">09:30</span><span class="what"><strong>浮御堂（滿月寺・堅田）</strong>　<span style="color:var(--good);font-weight:700;">🛶 湖上佛堂</span><span class="hrs">8:00–17:00 · ¥300 · 近江八景「堅田落雁」、佇立琵琶湖上的湖中佛堂，免費參拜停車場</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>京都站→堅田（湖西道路／國道161）　約30m</span></span></li>
+          <li><span class="time">11:00</span><span class="what"><strong>白鬚神社（高島）</strong>　<span style="color:var(--good);font-weight:700;">⛩ 湖中鳥居</span><span class="hrs">境內免費、社務所 9:00–17:00 · 免費停車約 30 台 · 「近江的嚴島」湖中大鳥居，晴天倒影絕美</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>堅田→高島（國道161 北上）　約30m</span></span></li>
+          <li><span class="time">12:30</span><span class="what">午餐：高島／マキノ（近江牛、鴨料理、鯖壽司）</span></li>
+          <li><span class="time">14:00</span><span class="what"><strong>メタセコイア並木（マキノ）</strong>　<span style="color:var(--good);font-weight:700;">🌲 水杉大道</span><span class="hrs">約 2.4km、500 棵水杉隧道、免費 · マキノピックランド免費停車 · 10 月為翠綠（紅葉見頃 11 月下旬–12 月上旬）</span><span class="food">🍇 名物：マキノピックランド當季採果、栗子、在地水果</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>白鬚→マキノ（國道161 北上）　約30m</span></span></li>
+          <li><span class="time">傍晚</span><span class="what">回京都住宿（車停飯店停車場）· 晚餐：四条河原町・先斗町（鴨川旁料亭）或京都駅ビル 10F 拉麵小路<span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>マキノ→京都（國道161／湖西道路南下）　約90m</span></span></li>
+        </ul>
+        <div class="note warn"><strong>⚠️ 白鬚神社過馬路安全（官方明令）：</strong>神社與湖中鳥居之間隔著繁忙的<strong>國道
+            161</strong>，附近無斑馬線與號誌，官方<strong>明確禁止橫越</strong>（過去 10 年 19 件事故、含 1
+          死）。拍湖中鳥居請一律使用<strong>社務所前的展望台「藍湖白鬚台」</strong>，切勿穿越馬路。</div>
+        <div class="note indigo">（不自駕的參考）JR 湖西線新快速：京都→近江高島 $860／37m（白鬚）、京都→堅田 $410／22m（浮御堂）、京都→マキノ $1,170／約70–95m。但三點分散、班次疏，仍以自駕最順。</div>
+      </div>
+
+      <!-- DAY 4 -->
+      <div class="day" id="day4">
+        <div class="day-head">
+          <div class="day-no">04<span>Day Four</span></div>
+          <div class="day-title">
+            <h3>自駕・勝尾寺達摩・箕面瀑布・移動大阪<span class="badge b-drive">自駕</span></h3>
+            <div class="date">10/9（週五）· 大阪（難波／新大阪）還車 · 住難波</div>
+          </div>
+        </div>
+        <ul class="tl">
+          <li><span class="time">08:30</span><span class="what">京都取車（行李上車），開往箕面</span></li>
+          <li><span class="time">10:00</span><span class="what"><strong>勝尾寺（達摩寺）</strong>　<span style="color:var(--straw);font-weight:700;">🧧 達摩</span><span class="hrs">平日 8:00–17:00（最終受付 16:30）· 門票 ¥500（小中 ¥400）· 停車 2 小時 ¥1,000（假日需預約，平日通常免預約）· 滿山「勝ダルマ」超好拍</span><span class="food">🎎 名物：勝ちダルマ（勝利達摩不倒翁）</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>京都→勝尾寺（名神／中國道／箕面有料）　約60m　高速$2,000</span></span></li>
+          <li><span class="time">12:00</span><span class="what">午餐：箕面市區</span></li>
+          <li><span class="time">13:30</span><span class="what"><strong>箕面公園・箕面大滝</strong>　<span style="color:var(--good);font-weight:700;">💧 瀑布</span><span class="hrs">免費 · 落差 33m、日本瀑布百選 · 停「箕面駅前停車場」沿滝道散步（到大滝單程約 2.7km／40–50 分，長輩可只走前段賞景）· 10 月綠意（紅葉 11 月中–12 月上）</span><span class="food">🍁 名物：もみじの天ぷら（紅葉天婦羅，甜脆點心）</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>勝尾寺→箕面公園　約15m</span></span></li>
+          <li><span class="time">16:30</span><span class="what"><strong>開往難波</strong>，卸行李入住後就近還車（難波／新大阪）<span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>箕面→難波（新御堂筋／阪神高速）　約40m　高速$1,000</span></span></li>
+          <li><span class="time">晚餐</span><span class="what"><strong>難波・道頓堀</strong><span class="hrs">住難波、旁邊就是道頓堀・心齋橋（徒步 5–10 分），晚上順逛最方便</span><span class="food">🐙 名物：章魚燒、大阪燒、串炸；固力果跑者招牌</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>難波飯店→道頓堀・心齋橋　約5–10m</span></span></li>
+        </ul>
+        <div class="note">勝尾寺、箕面大滝公共交通需轉巴士、班次稀少又難帶行李，開車最順；且箕面在「京都→大阪」順路上，剛好當自駕＋移動日。<strong>箕面大滝步道有一段距離</strong>（來回近
+          5.4km），長輩量力，走前段看店家與溪流即可；出發前可再確認滝道有無施工通行止。</div>
+      </div>
+
+      <!-- DAY 5 -->
+      <div class="day" id="day5">
+        <div class="day-head">
+          <div class="day-no">05<span>Day Five</span></div>
+          <div class="day-title">
+            <h3>神戶一日・明石大橋・港灣・神戶牛<span class="badge b-city">神戶</span></h3>
+            <div class="date">10/10（週六）· 難波往返 · 住難波</div>
+          </div>
+        </div>
+        <ul class="tl">
+          <li><span class="time">10:30</span><span class="what"><strong>明石海峽大橋・舞子海上プロムナード</strong>　<span style="color:var(--indigo);font-weight:700;">🌉 大橋</span><span class="hrs">9:00–18:00（最終入場 17:30）· 假日 ¥300（平日 ¥250）· 懸於海面 47m 的環形空中步道 · 舞子公園免費眺望</span><span class="food">🐙 名物：明石燒（玉子燒沾高湯）、明石章魚</span><span class="go"><span class="ln" style="background:#C8161D">阪神なんば線</span>大阪難波→神戶三宮（快速急行・免換車）　<span class="fare">$420</span>　43m　➡️ （三宮）</span><span class="go"><span class="ln" style="background:#1565C0">JR神戶線</span>三ノ宮→舞子（快速）　<span class="fare">$320</span>　18m</span></span></li>
+          <li><span class="time">12:30</span><span class="what">回三宮／元町午餐（神戶洋食或海鮮）<span class="go"><span class="ln" style="background:#1565C0">JR神戶線</span>舞子→三ノ宮（快速）　<span class="fare">$320</span>　約18m</span></span></li>
+          <li><span class="time">14:00</span><span class="what"><strong>生田神社・舊居留地</strong><span class="hrs">生田神社境內免費（授與所 9:00–16:30）、三宮結緣名社 · 舊居留地：開港歐風建築街區、精品櫥窗散步，平坦好走</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>三宮／元町一帶　約5–10m</span></span></li>
+          <li><span class="time">15:30</span><span class="what"><strong>美利堅公園・神戶港塔・紅磚倉庫</strong><span class="hrs">神戶港塔 9:00–23:00（最終 22:30）、展望層＋屋頂 ¥1,200（僅展望層 ¥1,000）、電梯直達 · 美利堅公園「BE KOBE」海濱免費 · 紅磚倉庫／umie（10:00–21:00）逛街</span><span class="food">🛍 特色：NAGASAWA 神戶原創鋼筆墨水（紅磚倉庫）；神戶洋菓子（モロゾフ・風月堂ゴーフル・觀音屋起司蛋糕）</span><span class="go"><span class="ln" style="background:#1AA0A0">地下鐵海岸線</span>三宮・花時計前→みなと元町　<span class="fare">$210</span>　約4m</span></span></li>
+          <li><span class="time">晚餐</span><span class="what"><strong>神戶牛鐵板燒</strong>　<span style="color:var(--straw);font-weight:700;">🥩 和牛</span><span class="hrs">平價：ステーキランド神戶館（神戶牛午餐約 ¥3,500）· 名店：モーリヤ、みその（始祖，建議預約）</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>三宮一帶　約5m</span></span></li>
+          <li><span class="time">傍晚</span><span class="what"><strong>神戶三宮 → 大阪難波</strong>，入住難波<span class="go"><span class="ln" style="background:#C8161D">阪神なんば線</span>神戶三宮→大阪難波（快速急行）　<span class="fare">$420</span>　43m</span></span></li>
+        </ul>
+        <div class="note indigo"><strong>神戶市區不開車</strong>（Day 4
+          已還車）：市中心停車不便，改電車＋步行；明石大橋、生田神社、舊居留地、港塔、美利堅、紅磚倉庫都在三宮／元町／港區一帶，長輩一天走得完。<strong>想改賞花</strong>可把明石大橋換成
+          <span class="ln" style="background:#3E6E4B">布引ロープウェイ</span>新神戶→布引ハーブ園　來回 $2,500　約10m（坐纜車看港灣＋秋波斯菊）。</div>
+      </div>
+
+      <!-- DAY 6 -->
+      <div class="day" id="day6">
+        <div class="day-head">
+          <div class="day-no">06<span>Day Six</span></div>
+          <div class="day-title">
+            <h3>黑門市場・住吉大社・心齋橋道頓堀・臨空城 Outlet<span class="badge b-city">大阪→KIX</span></h3>
+            <div class="date">10/11（週日）· KIX 19:50 離境（虎航）</div>
+          </div>
+        </div>
+        <ul class="tl">
+          <li><span class="time">09:00</span><span class="what"><strong>黑門市場</strong>　<span class="tag-sea">🐟 黑鮪魚腹・生魚片</span><span class="hrs">約 9:00–18:00 · 難波旁（日本橋站 10 號出口）· 現切黑鮪魚腹、和牛串、海膽、玉子燒、水果，坐著吃</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>難波→黑門　約8m（或 <span class="ln" style="background:#E85298">地下鐵千日前線</span>難波→日本橋 <span class="fare">$190</span> 2m）</span></span></li>
+          <li><span class="time">10:30</span><span class="what"><strong>心齋橋筋・道頓堀</strong>（累或時間不夠可捨）<span class="hrs">有頂棚拱廊平坦好走 · 固力果招牌、道頓堀運河</span><span class="food">🛍 伴手禮：藥妝・化妝品、和菓子、宇治茶</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>黑門→心齋橋・道頓堀　約8m</span></span></li>
+          <li><span class="time">11:30</span><span class="what"><strong>住吉大社</strong><span class="hrs">6:30–17:00、免費 · 南海「住吉大社」站即到 · 太鼓橋地標（旁有平緩繞道，免爬階）· 往機場方向順路</span><span class="go"><span class="ln" style="background:#004098">南海本線</span>難波→住吉大社（普通）　<span class="fare">$240</span>　9m</span></span></li>
+          <li><span class="time">13:30</span><span class="what"><strong>臨空城 Outlet（りんくうプレミアム・アウトレット）</strong>　<span style="color:var(--indigo);font-weight:700;">🛍 購物</span><span class="hrs">10:00–20:00 · 約 250 家店、海濱可眺關空聯絡橋 · 「臨空城」站步行 6 分 · 離關空僅一站</span><span class="go"><span class="ln" style="background:#004098">南海本線</span>住吉大社→りんくうタウン（空港急行）　<span class="fare">約$720</span>　約33m</span></span></li>
+          <li><span class="time">16:15</span><span class="what"><strong>臨空城 → 關西機場</strong>（約 16:50 到，<strong>起飛前約 3 小時</strong>），報到、安檢<span class="hrs">虎航 19:50 起飛 · 保險起見提早 3 小時到機場；報到後可逛<strong>關空免稅店買伴手禮</strong>再登機</span><span class="go"><span class="ln" style="background:#0089CF">南海機場線</span>りんくうタウン→関西空港　<span class="fare">$370</span>　6m</span></span></li>
+        </ul>
+        <div class="note">
+          <strong>行李：</strong>後兩晚住難波，最省力是<strong>前一晚用飯店宅配把大行李寄到關空</strong>（當天輕裝）；或退房後寄放難波飯店櫃台，逛完回取。備援：南海難波站大型置物櫃、關空手荷物一時預かり。
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 名產伴手禮 ============ -->
+    <section class="block" id="product">
+      <div class="kicker"><span class="num">產</span>
+        <h2>各地名產・美食・伴手禮速查</h2><span class="rule"></span>
+      </div>
+      <div class="twrap">
+        <table>
+          <thead>
+            <tr>
+              <th>地點</th>
+              <th>必吃美食（現場）</th>
+              <th>伴手禮／特色商品</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>京都車站</strong></td>
+              <td>拉麵小路、伊勢丹餐廳</td>
+              <td>京ばあむ、阿闍梨餅、生八橋、抹茶菓子；Yodobashi／Bic 電器</td>
+            </tr>
+            <tr>
+              <td><strong>嵐山</strong></td>
+              <td>湯豆腐、抹茶冰淇淋</td>
+              <td>生八橋、京漬物、抹茶菓子</td>
+            </tr>
+            <tr>
+              <td><strong>錦市場</strong></td>
+              <td>三木雞卵玉子燒、こんなもんじゃ豆乳甜甜圈、カリカリ博士章魚燒、章魚玉子</td>
+              <td>京漬物、湯葉、佃煮、抹茶</td>
+            </tr>
+            <tr>
+              <td><strong>清水寺・二三年坂</strong></td>
+              <td>抹茶甜點</td>
+              <td>清水燒陶器、生八橋、七味唐辛子</td>
+            </tr>
+            <tr>
+              <td><strong>新京極・寺町</strong></td>
+              <td>食べ歩き小吃</td>
+              <td>京文具・和雜貨、藥妝、佛具念珠</td>
+            </tr>
+            <tr>
+              <td><strong>琵琶湖（高島・堅田）</strong></td>
+              <td>近江牛、鴨料理、琵琶湖鮮魚</td>
+              <td>鯖壽司、栗子、當季水果、走井餅</td>
+            </tr>
+            <tr>
+              <td><strong>勝尾寺・箕面</strong></td>
+              <td>紅葉天婦羅（もみじ天ぷら）</td>
+              <td>勝ちダルマ（達摩）</td>
+            </tr>
+            <tr>
+              <td><strong>神戶</strong></td>
+              <td>神戶牛鐵板燒、明石燒、洋食</td>
+              <td>NAGASAWA 鋼筆墨水、モロゾフ／風月堂ゴーフル、觀音屋起司蛋糕</td>
+            </tr>
+            <tr>
+              <td><strong>黑門市場</strong></td>
+              <td>黑鮪魚腹、和牛串、海膽、烤帆立貝</td>
+              <td>高級水果、日本刀具</td>
+            </tr>
+            <tr>
+              <td><strong>心齋橋・道頓堀</strong></td>
+              <td>章魚燒、大阪燒、串炸</td>
+              <td>藥妝・化妝品、和菓子、宇治茶</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ 10月風景 ============ -->
+    <section class="block">
+      <div class="kicker"><span class="num">景</span>
+        <h2>10 月花季與風景（當季實況）</h2><span class="rule"></span>
+      </div>
+      <div class="note indigo">
+        <strong>季節說明：</strong>10/6–10/11 <strong>櫻花</strong>看不到；<strong>楓葉與銀杏</strong>在關西平地高峰約落在 <strong>11
+          月中下旬</strong>，10 月初尚未轉紅。故本行程以「<strong>湖光山色＋水景</strong>」為當季主角。
+      </div>
+      <div class="twrap">
+        <table>
+          <thead>
+            <tr>
+              <th>風景</th>
+              <th>地點</th>
+              <th>10 月觀賞</th>
+              <th>安排</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>湖中鳥居</strong> ⛩</td>
+              <td>白鬚神社（琵琶湖畔）</td>
+              <td>湖上大鳥居、晴天倒影絕美</td>
+              <td>Day 3</td>
+            </tr>
+            <tr>
+              <td><strong>水杉並木</strong> 🌲</td>
+              <td>メタセコイア並木（マキノ）</td>
+              <td>10 月翠綠隧道（紅葉 11 月下旬）</td>
+              <td>Day 3</td>
+            </tr>
+            <tr>
+              <td><strong>湖上佛堂</strong> 🛶</td>
+              <td>浮御堂（堅田）</td>
+              <td>近江八景、湖景古樸</td>
+              <td>Day 3</td>
+            </tr>
+            <tr>
+              <td><strong>竹林</strong> 🎋</td>
+              <td>嵐山竹林小徑・渡月橋</td>
+              <td>竹林四季常綠</td>
+              <td>Day 1</td>
+            </tr>
+            <tr>
+              <td><strong>瀑布</strong> 💧</td>
+              <td>箕面大滝</td>
+              <td>10 月綠意（紅葉 11 月中）</td>
+              <td>Day 4</td>
+            </tr>
+            <tr>
+              <td><strong>秋波斯菊</strong> 🌸</td>
+              <td>神戶布引香草園（纜車）</td>
+              <td>10 月波斯菊、秋玫瑰</td>
+              <td>Day 5 可選</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ 費用概估 ============ -->
+    <section class="block">
+      <div class="kicker"><span class="num">費</span>
+        <h2>費用概估（每人・不含機票住宿）</h2><span class="rule"></span>
+      </div>
+      <div class="twrap">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>內容</th>
+              <th>概估</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>機場往返</td>
+              <td>WEST QR HARUKA 關空→京都 ¥2,200 + 末日難波→關空段約 ¥1,300</td>
+              <td class="yen">約 ¥3,500</td>
+            </tr>
+            <tr>
+              <td>京都市區交通</td>
+              <td>ICOCA（嵐山、錦市場、清水／八坂、京都市區電車等）</td>
+              <td class="yen">約 ¥2,500</td>
+            </tr>
+            <tr>
+              <td>神戶交通</td>
+              <td>難波↔三宮 ¥840 + 三宮↔舞子 ¥640 + 港區地鐵</td>
+              <td class="yen">約 ¥1,700</td>
+            </tr>
+            <tr>
+              <td>景點門票</td>
+              <td>天龍寺庭園 ¥500、清水寺 ¥500、浮御堂 ¥300、勝尾寺 ¥500、舞子海上步道 ¥300、神戶港塔 ¥1,200（白鬚・水杉・八坂・生田・舊居留地・美利堅 免費）</td>
+              <td class="yen">約 ¥3,300</td>
+            </tr>
+            <tr>
+              <td>租車（分攤・5 人）</td>
+              <td>TOYOTA 完整套餐（含 ETC＋雙重保險）W2 ¥49,830／SUV3 ¥55,880 ＋ 異地還車 ¥5,500 ＋ 高速/油約 ¥8,000（自駕日僅計油資＋過路費）</td>
+              <td class="yen">W2 約 ¥12,700<br>SUV3 約 ¥13,900</td>
+            </tr>
+            <tr>
+              <td>海鮮／蟹／和牛餐</td>
+              <td>かに道楽蟹 + 黑門黑鮪魚腹 + 神戶牛（正餐另計）</td>
+              <td class="yen">約 ¥8,000 起</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;font-size:13.5px;color:var(--ink-soft);">＊同行：長輩（55–60）2 人＋成人 2–3 人，門票皆以大人計。<strong>自駕日（Day 3–4）僅計油資與過路費，不含大眾運輸</strong>。住宿只兩處：京都（四条烏丸／京都站，Day 1–3）＋ 難波（Day 4–5）。神戶牛想省可選 ステーキランド（神戶牛午餐約 ¥3,500）。<br>＊<strong>交通合計（每人）</strong>＝ 租車分攤 ＋ 乘車（機場往返 ¥3,500＋京都 ¥2,500＋神戶 ¥1,700 ＝ ¥7,700）＝ 約 <strong>¥20,400（W2）／¥21,600（SUV3）</strong>。</p>
+    </section>
+
+    <!-- ============ 票券建議 ============ -->
+    <section class="block">
+      <div class="kicker"><span class="num">券</span>
+        <h2>票券建議：不需買一日券</h2><span class="rule"></span>
+      </div>
+      <div class="note">本行程<strong>中間兩天自駕、市區多步行、大阪只走免費景點</strong>，用量低，各種一日券都難回本 →
+        <strong>全程用 ICOCA 按次刷最省、最省事</strong>；機場段用 WEST QR HARUKA ¥2,200。</div>
+      <div class="twrap">
+        <table>
+          <thead>
+            <tr>
+              <th>票券</th>
+              <th>建議</th>
+              <th>原因</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>京都地下鐵 1 日券 ¥800／地鐵巴士 1 日券 ¥1,100</td>
+              <td>❌ 不買</td>
+              <td>Day1、Day2 地鐵各只花 ¥220–440，不能跨日；又刻意少搭公車</td>
+            </tr>
+            <tr>
+              <td>神戸街めぐり 1day（阪神版 ¥2,150）</td>
+              <td>❌ 不買</td>
+              <td>港塔／舞子／JR 都不涵蓋，交通只值約 ¥1,260，附的設施券也用不到</td>
+            </tr>
+            <tr>
+              <td>大阪周遊卡 ¥2,400／Enjoy Eco Card</td>
+              <td>❌ 不買</td>
+              <td>大阪只走免費景點＋Outlet，Day6 走南海非 Metro</td>
+            </tr>
+            <tr>
+              <td>JR 關西地區 1 日券 ¥2,700</td>
+              <td>❌ 不買</td>
+              <td>嵐山、舞子分散不同天；已買 HARUKA 更划算</td>
+            </tr>
+            <tr>
+              <td><strong>ICOCA</strong>（IC 卡）</td>
+              <td>✅ 主力</td>
+              <td>京都・神戶・大阪全程嗶卡；已有 2 張、加購 3 張</td>
+            </tr>
+            <tr>
+              <td><strong>WEST QR HARUKA</strong> 關空→京都</td>
+              <td>✅ 照買 ¥2,200</td>
+              <td>機場進京都最便宜、對號空間大</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:10px;font-size:13px;color:var(--ink-soft);">＊長輩為 55–60 歲，未滿 65／70，神戶港塔・舞子的敬老折扣不適用，門票以大人全額計。</p>
+    </section>
+
+    <!-- ============ 長輩提醒 ============ -->
+    <section class="block">
+      <div class="kicker"><span class="num">叮</span>
+        <h2>長輩友善提醒</h2><span class="rule"></span>
+      </div>
+      <ul class="plain">
+        <li><strong>住宿只兩處：</strong>京都 3 晚（四条烏丸／京都站）、難波 2 晚，全程只換一次飯店。</li>
+        <li><strong>⚠️ 白鬚神社禁越馬路：</strong>湖中鳥居在國道對向湖側、官方明令禁止穿越，請用社務所前展望台「藍湖白鬚台」拍照。</li>
+        <li><strong>箕面大滝步道長：</strong>來回近 5.4km，長輩可只走前段；勝尾寺可開車到門口、較輕鬆。</li>
+        <li><strong>舞子公休：</strong>舞子海上步道 10–3 月每月第 2 週一休（2026/10/13），本行程排 10/10（六）無礙。</li>
+        <li><strong>少搭公車：</strong>京都以電車＋步行代替公車；神戶↔大阪搭阪神なんば線直達；末日南海線一路往南到關空。</li>
+        <li><strong>電梯／代步：</strong>神戶港塔電梯直達；嵐山、港區、舊居留地、商店街皆平坦。</li>
+        <li><strong>10 月天氣：</strong>日夜溫差大（約 15–24°C），洋蔥式穿搭 + 薄外套；琵琶湖畔、箕面山區早晚偏涼。</li>
+        <li><strong>飲食：</strong>不吃河豚；蟹＝Day 1 かに道楽（全年供應）、和牛＝Day 5 神戶牛、海鮮生魚片＝黑門（黑鮪魚腹）＋錦市場。</li>
+      </ul>
+    </section>
+
+    <div class="foot" id="note">
+      營業時間與票價已於 2026-07 查證各官方網站（天龍寺、清水寺、白鬚神社／高島市觀光、メタセコイア並木、浮御堂／滋賀觀光、勝尾寺、箕面公園、舞子海上プロムナード、神戶ポートタワー、布引ハーブ園、りんくうプレミアム・アウトレット、JR
+      西日本 HARUKA、阪神／南海電鐵等），仍以出發當日官方公告為準。<br>
+      可再補充：想吃的神戶牛／蟹名店訂位、京都與難波確切住宿點，我再據此微調。
+    </div>
+
+  </div>
+
+  <nav id="jumpnav" aria-label="快速跳轉">
+    <a class="jn-top" href="#top" title="回到最頂端">▲</a>
+    <a href="#info" title="機票與住宿">✈</a>
+    <a href="#day1" title="Day 1">1</a>
+    <a href="#day2" title="Day 2">2</a>
+    <a href="#day3" title="Day 3">3</a>
+    <a href="#day4" title="Day 4">4</a>
+    <a href="#day5" title="Day 5">5</a>
+    <a href="#day6" title="Day 6">6</a>
+    <a href="#product" title="名產・伴手禮">產</a>
+  </nav>
+
+</body>
+
+</html>

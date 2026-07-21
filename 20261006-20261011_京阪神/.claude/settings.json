@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:rent.toyota.co.jp)",
+      "WebFetch(domain:www.rent.toyota.co.jp)",
+      "WebFetch(domain:www.r-kyoto.co.jp)",
+      "WebFetch(domain:www.pointtown.com)",
+      "WebFetch(domain:www.trlosaka.co.jp)"
+    ]
+  }
+}

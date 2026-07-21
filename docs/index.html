@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旅の記録 · 旅行行程集</title>
+  <style>
+    html { scroll-behavior: smooth }
+    html, body { margin: 0; padding: 0 }
+
+    :root {
+      --paper: #EFF0EA;
+      --paper-2: #F7F7F2;
+      --ink: #1B232C;
+      --ink-soft: #41505E;
+      --indigo: #24486B;
+      --indigo-deep: #16304A;
+      --persimmon: #C0532B;
+      --straw: #9A7B2E;
+      --line: #D2D4CB;
+      --line-soft: #E1E2DA;
+      --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Hiragino Sans", system-ui, sans-serif;
+      --serif: "Noto Serif TC", "Songti TC", "Yu Mincho", "Hiragino Mincho ProN", "MingLiU", serif;
+      --mono: "SF Mono", "JetBrains Mono", "Consolas", "Menlo", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 0 22px 96px;
+    }
+
+    /* ---------- header ---------- */
+    header.masthead {
+      padding: 72px 0 34px;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .eyebrow {
+      font-size: 12.5px;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+      color: var(--persimmon);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(38px, 7vw, 64px);
+      line-height: 1.1;
+      letter-spacing: .02em;
+      text-wrap: balance;
+      margin: 0 0 6px;
+      color: var(--indigo-deep);
+    }
+
+    h1 .sub {
+      display: block;
+      font-size: clamp(15px, 2.4vw, 19px);
+      color: var(--ink-soft);
+      font-weight: 500;
+      letter-spacing: .02em;
+      margin-top: 16px;
+      font-family: var(--sans);
+    }
+
+    /* ---------- section frame ---------- */
+    section.block { margin-top: 52px; }
+
+    .kicker {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .kicker .num {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--persimmon);
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    .kicker h2 {
+      font-family: var(--serif);
+      font-size: clamp(21px, 3.4vw, 27px);
+      font-weight: 700;
+      color: var(--indigo-deep);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .kicker .rule {
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+      align-self: center;
+    }
+
+    /* ---------- trip cards ---------- */
+    .trips {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 26px 24px 22px;
+      transition: transform .16s, box-shadow .16s, border-color .16s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    a.card::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: var(--persimmon);
+    }
+
+    a.card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(27, 35, 44, .13);
+      border-color: var(--indigo);
+    }
+
+    .card .c-eyebrow {
+      font-size: 11.5px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--persimmon);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--indigo-deep);
+      margin: 0 0 8px;
+      line-height: 1.25;
+    }
+
+    .card .c-date {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 14px;
+    }
+
+    .card .c-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .card .tag {
+      font-size: 12px;
+      padding: 3px 9px;
+      border-radius: 2px;
+      background: rgba(36, 72, 107, .1);
+      color: var(--indigo-deep);
+    }
+
+    .card .go {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--indigo);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card .go::after {
+      content: "→";
+      transition: transform .16s;
+    }
+
+    a.card:hover .go::after { transform: translateX(4px); }
+
+    /* upcoming / placeholder card */
+    .card.soon {
+      background: transparent;
+      border-style: dashed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--ink-soft);
+      min-height: 180px;
+    }
+
+    .card.soon::before { display: none; }
+    .card.soon:hover { transform: none; box-shadow: none; border-color: var(--line); }
+
+    .card.soon .plus {
+      font-size: 34px;
+      color: var(--line);
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .foot {
+      margin-top: 64px;
+      padding-top: 22px;
+      border-top: 2px solid var(--ink);
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="masthead">
+      <div class="eyebrow">Travel Journal · 旅の記録</div>
+      <h1>旅行行程集<span class="sub">親手規劃的每一趟旅程・行程・交通・美食・伴手禮，一頁看完</span></h1>
+    </header>
+
+    <section class="block">
+      <div class="kicker">
+        <span class="num">01</span>
+        <h2>行程列表</h2>
+        <span class="rule"></span>
+      </div>
+
+      <div class="trips">
+
+        <a class="card" href="kansai-2026/">
+          <div class="c-eyebrow">Kansai · Autumn 2026</div>
+          <h3>京阪神秋日</h3>
+          <div class="c-date">2026 / 10 / 06 – 10 / 11 · 6 天 5 夜</div>
+          <div class="c-tags">
+            <span class="tag">京都</span>
+            <span class="tag">琵琶湖</span>
+            <span class="tag">神戶</span>
+            <span class="tag">大阪</span>
+            <span class="tag">長輩友善</span>
+          </div>
+          <span class="go">查看行程</span>
+        </a>
+
+        <div class="card soon">
+          <div class="plus">+</div>
+          <div>下一趟旅程<br>規劃中</div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="foot">
+      © 2026 旅行行程集 · 以 GitHub Pages 發佈 · 內容以出發當日各官方公告為準。
+    </div>
+
+  </div>
+</body>
+
+</html>
