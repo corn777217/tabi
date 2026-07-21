@@ -393,10 +393,10 @@
     /* Google Map 紅色地標連結 */
     a.gmap {
       display: inline-block;
-      width: 13px;
-      height: 17px;
-      margin-left: 6px;
-      vertical-align: -3px;
+      width: 19px;
+      height: 24px;
+      margin-left: 7px;
+      vertical-align: -5px;
       background: no-repeat center / contain;
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%23EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.4" fill="%23ffffff"/></svg>');
       transition: transform .12s;
@@ -404,6 +404,41 @@
 
     a.gmap:hover {
       transform: translateY(-2px) scale(1.12);
+    }
+
+    /* 每日景點相片牆 */
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    @media(min-width:640px) {
+      .photos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .photos figure {
+      margin: 0;
+    }
+
+    .photos img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background: var(--line-soft);
+    }
+
+    .photos figcaption {
+      font-size: 12px;
+      color: var(--ink-soft);
+      margin-top: 5px;
+      text-align: center;
     }
 
     .sub-h {
@@ -768,6 +803,11 @@
             <p>🛍 伴手禮：京ばあむ、阿闍梨餅、生八橋、抹茶菓子（伊勢丹 B1/B2）。</p>
           </div>
         </details>
+        <div class="photos">
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Togetsukyo_in_Kyoto_Arashiyama.jpg/1280px-Togetsukyo_in_Kyoto_Arashiyama.jpg" alt="嵐山 渡月橋"><figcaption>嵐山・渡月橋</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Tenryuji_Kyoto.jpg/1280px-Tenryuji_Kyoto.jpg" alt="天龍寺庭園"><figcaption>天龍寺庭園</figcaption></figure>
+          <figure><img loading="lazy" src="https://graceblog.tw/wp-content/uploads/2023/12/88-6579.jpg" alt="東本願寺"><figcaption>東本願寺（備案）</figcaption></figure>
+        </div>
       </div>
 
       <!-- DAY 2 -->
@@ -783,10 +823,15 @@
           <li><span class="time">10:00</span><span class="what"><strong>錦市場</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=錦市場" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span class="tag-sea">🐟 海鮮・玉子燒</span><span class="hrs">「京都廚房」約 9:00–18:00（各店不一）· 約 390m、400 年歷史</span><span class="food">🍢 名店：三木雞卵（高湯玉子燒 9:00–17:00）、こんなもんじゃ（豆乳甜甜圈）、カリカリ博士（章魚燒 ¥280）、打田漬物（章魚玉子）、櫂（佃煮試吃）</span><span class="go"><span class="ln" style="background:#009A44">地下鐵烏丸線</span>京都→四条　<span class="fare">$220</span>　3m（步行 3 分到錦市場）</span></span></li>
           <li><span class="time">13:00</span><span class="what">午餐：錦市場或四条一帶</span></li>
           <li><span class="time">14:00</span><span class="what"><strong>清水寺</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=清水寺" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a> + 二年坂・三年坂<span class="hrs">拝観 6:00–18:00 · 門票 ¥500（小中 ¥200）</span><span class="food">🍵 名物：清水燒陶器、生八橋、抹茶甜點、七味唐辛子</span><span class="go"><span class="ln" style="background:#1F7A5A">京阪本線</span>祇園四条→清水五条　<span class="fare">$170</span>　約3m（先步行至祇園四条 約7分）</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>清水五条→清水寺（清水坂上坡，約20分、可慢行休息）</span></span></li>
-          <li><span class="time">16:30</span><span class="what"><strong>八坂神社</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=八坂神社" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a><span class="hrs">境內 24 小時免費（社務所 9:00–17:00）· 從二三年坂順坡下行接祇園</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>清水寺→八坂神社（二三年坂下坡）　約15m</span></span></li>
+          <li><span class="time">16:30</span><span class="what"><strong>八坂神社</strong><a class="gmap" href="https://maps.app.goo.gl/iFdijKesX7fXrjdDA" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a><span class="hrs">境內 24 小時免費（社務所 9:00–17:00）· 從二三年坂順坡下行接祇園</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>清水寺→八坂神社（二三年坂下坡）　約15m</span></span></li>
           <li><span class="time">傍晚</span><span class="what"><strong>新京極・寺町商店街</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=新京極商店街" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a><span class="hrs">有頂棚商店街、平坦好走，雨天也 OK · 鄰四条河原町晚餐選擇多</span><span class="food">🛍 特色：生八橋、京都文具・和雜貨、藥妝、佛具念珠（寺町）</span><span class="go"><span class="ln" style="background:#7A7A7A">步行</span>八坂→新京極／四条河原町　約12m</span><span class="go"><span class="ln" style="background:#009A44">地下鐵烏丸線</span>四条→京都（回飯店）　<span class="fare">$220</span>　3m</span></span></li>
         </ul>
         <div class="note">京都公車擁擠又難拖行李，本行程<strong>以電車（京阪）＋步行取代公車與計程車</strong>；清水坂雖為上坡，但沿途店家多、可分段休息，回程走二三年坂一路下坡順逛。（備援：市バス 206 系統「京都駅前→清水道／祇園」約 $230、15–20m。）</div>
+        <div class="photos">
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Kiyomizu-dera%2C_Kyoto%2C_November_2016_-02.jpg/1280px-Kiyomizu-dera%2C_Kyoto%2C_November_2016_-02.jpg" alt="清水寺"><figcaption>清水寺</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/JP-Kyoto-yasaka.JPG/1280px-JP-Kyoto-yasaka.JPG" alt="八坂神社"><figcaption>八坂神社</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Nishiki_Ichiba_by_matsuyuki.jpg/1280px-Nishiki_Ichiba_by_matsuyuki.jpg" alt="錦市場"><figcaption>錦市場</figcaption></figure>
+        </div>
       </div>
 
       <!-- DAY 3 -->
@@ -802,15 +847,20 @@
           <li><span class="time">08:30</span><span class="what"><strong>京都站前取車</strong>（自排小車 + ETC，租至 Day 4 大阪還）</span></li>
           <li><span class="time">09:15</span><span class="what"><strong>三千院（大原）</strong><a class="gmap" href="https://maps.app.goo.gl/pYgjDYxMbMeveUKK8" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🍃 苔庭古剎</span><span class="hrs">9:00–17:00（11 月 8:30–17:00、12–2 月 9:00–16:30）· ¥700 · 大原山間天台宗古剎，聚碧園・有清園苔庭、往生極樂院、わらべ地藏超療癒 · 大原有料停車場約 ¥400–500（沿參道步行約 10 分）</span><span class="food">🍢 名物：大原志ば漬（紫蘇漬物）、湯葉、栗子甜點</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>京都站→大原（國道367 鯖街道）　約45m</span></span></li>
           <li><span class="time">10:45</span><span class="what"><strong>浮御堂（滿月寺・堅田）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=浮御堂 満月寺" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🛶 湖上佛堂</span><span class="hrs">8:00–17:00 · ¥300 · 近江八景「堅田落雁」、佇立琵琶湖上的湖中佛堂，免費參拜停車場</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>大原→堅田（途中越／國道477・湖西道路）　約30m</span></span></li>
-          <li><span class="time">11:45</span><span class="what"><strong>白鬚神社（高島）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=白鬚神社 高島" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">⛩ 湖中鳥居</span><span class="hrs">境內免費、社務所 9:00–17:00 · 免費停車約 30 台 · 「近江的嚴島」湖中大鳥居，晴天倒影絕美</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>堅田→高島（國道161 北上）　約30m</span></span></li>
+          <li><span class="time">11:45</span><span class="what"><strong>白鬚神社（高島）</strong><a class="gmap" href="https://maps.app.goo.gl/bAMB5FyTqaQw2Mzs6" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">⛩ 湖中鳥居</span><span class="hrs">境內免費、社務所 9:00–17:00 · 免費停車約 30 台 · 「近江的嚴島」湖中大鳥居，晴天倒影絕美</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>堅田→高島（國道161 北上）　約30m</span></span></li>
           <li><span class="time">13:00</span><span class="what">午餐：高島／マキノ（近江牛、鴨料理、鯖壽司）</span></li>
-          <li><span class="time">14:00</span><span class="what"><strong>メタセコイア並木（マキノ）</strong><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=メタセコイア並木 マキノ" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🌲 水杉大道</span><span class="hrs">約 2.4km、500 棵水杉隧道、免費 · マキノピックランド免費停車 · 10 月為翠綠（紅葉見頃 11 月下旬–12 月上旬）</span><span class="food">🍇 名物：マキノピックランド當季採果、栗子、在地水果</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>白鬚→マキノ（國道161 北上）　約30m</span></span></li>
+          <li><span class="time">14:00</span><span class="what"><strong>メタセコイア並木（マキノ）</strong><a class="gmap" href="https://maps.app.goo.gl/ogXvMPtV6bfoBAh46" target="_blank" rel="noopener" title="Google Map" aria-label="Google Map"></a>　<span style="color:var(--good);font-weight:700;">🌲 水杉大道</span><span class="hrs">約 2.4km、500 棵水杉隧道、免費 · マキノピックランド免費停車 · 10 月為翠綠（紅葉見頃 11 月下旬–12 月上旬）</span><span class="food">🍇 名物：マキノピックランド當季採果、栗子、在地水果</span><span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>白鬚→マキノ（國道161 北上）　約30m</span></span></li>
           <li><span class="time">傍晚</span><span class="what">回京都住宿（車停飯店停車場）· 晚餐：四条河原町・先斗町（鴨川旁料亭）或京都駅ビル 10F 拉麵小路<span class="go"><span class="ln" style="background:#9A7B2E">自駕</span>マキノ→京都（國道161／湖西道路南下）　約90m</span></span></li>
         </ul>
         <div class="note warn"><strong>⚠️ 白鬚神社過馬路安全（官方明令）：</strong>神社與湖中鳥居之間隔著繁忙的<strong>國道
             161</strong>，附近無斑馬線與號誌，官方<strong>明確禁止橫越</strong>（過去 10 年 19 件事故、含 1
           死）。拍湖中鳥居請一律使用<strong>社務所前的展望台「藍湖白鬚台」</strong>，切勿穿越馬路。</div>
         <div class="note indigo">（不自駕的參考）JR 湖西線新快速：京都→近江高島 $860／37m（白鬚）、京都→堅田 $410／22m（浮御堂）、京都→マキノ $1,170／約70–95m。但三點分散、班次疏，仍以自駕最順。</div>
+        <div class="photos">
+          <figure><img loading="lazy" src="https://tw.wamazing.com/media/wp-content/uploads/sites/4/2024/03/shirahigejinjya_pixta_72907951_M.jpg.webp" alt="白鬚神社 湖中鳥居"><figcaption>白鬚神社・湖中鳥居</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/A_row_of_Metasequoia_trees_Makino_20200919.jpg/1280px-A_row_of_Metasequoia_trees_Makino_20200919.jpg" alt="メタセコイア並木"><figcaption>水杉並木（マキノ）</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Mangetsuji-Ukimido-nt8.jpg/1280px-Mangetsuji-Ukimido-nt8.jpg" alt="浮御堂"><figcaption>浮御堂（滿月寺）</figcaption></figure>
+        </div>
       </div>
 
       <!-- DAY 4 -->
@@ -832,6 +882,11 @@
         </ul>
         <div class="note">勝尾寺、箕面大滝公共交通需轉巴士、班次稀少又難帶行李，開車最順；且箕面在「京都→大阪」順路上，剛好當自駕＋移動日。<strong>箕面大滝步道有一段距離</strong>（來回近
           5.4km），長輩量力，走前段看店家與溪流即可；出發前可再確認滝道有無施工通行止。</div>
+        <div class="photos">
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Katsuo-ji2336.jpg/1280px-Katsuo-ji2336.jpg" alt="勝尾寺"><figcaption>勝尾寺</figcaption></figure>
+          <figure><img loading="lazy" src="https://d3c6s7tyrg38uz.cloudfront.net/aclu1xr43imly67zevxosjj34b18" alt="勝尾寺 勝ダルマ達摩"><figcaption>勝尾寺・滿山勝ダルマ</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Minoh_Falls_Minoh_Osaka_pref_Japan01s5.jpg/1280px-Minoh_Falls_Minoh_Osaka_pref_Japan01s5.jpg" alt="箕面大滝"><figcaption>箕面大滝</figcaption></figure>
+        </div>
       </div>
 
       <!-- DAY 5 -->
@@ -855,6 +910,13 @@
         <div class="note indigo"><strong>神戶市區不開車</strong>（Day 4
           已還車）：市中心停車不便，改電車＋步行；明石大橋、生田神社、舊居留地、港塔、美利堅、紅磚倉庫都在三宮／元町／港區一帶，長輩一天走得完。<strong>想改賞花</strong>可把明石大橋換成
           <span class="ln" style="background:#3E6E4B">布引ロープウェイ</span>新神戶→布引ハーブ園　來回 $2,500　約10m（坐纜車看港灣＋秋波斯菊）。</div>
+        <div class="photos">
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Akashi_Bridge.JPG/1280px-Akashi_Bridge.JPG" alt="明石海峽大橋"><figcaption>明石海峽大橋</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/KOBE_PORT_TOWER_001.jpg/1280px-KOBE_PORT_TOWER_001.jpg" alt="神戶港塔"><figcaption>神戶港塔</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ikuta-jinja%2C_haiden-1.jpg/1280px-Ikuta-jinja%2C_haiden-1.jpg" alt="生田神社"><figcaption>生田神社</figcaption></figure>
+          <figure><img loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkyJWDoOWA0tei1nndqCc1p-i9Wk-IhJuMc38B8YKaThXZ-qgwy2KsGLqK7vS3nx7X13smDujU9Ewp5TeuNn2asRx1BZ1CfVosuZIp9eQh-UzUB6zdO08YF7t2Kn4ei5Pyy_QG6=s1360-w1360-h1020-rw" alt="神戶煉瓦倉庫"><figcaption>神戶煉瓦倉庫</figcaption></figure>
+          <figure><img loading="lazy" src="https://tblg.k-img.com/restaurant/images/Rvw/102017/640x640_rect_102017374.jpg" alt="神戶牛鐵板燒"><figcaption>神戶牛（プロペラ）</figcaption></figure>
+        </div>
       </div>
 
       <!-- DAY 6 -->
@@ -875,6 +937,11 @@
         </ul>
         <div class="note">
           <strong>行李：</strong>後兩晚住難波，最省力是<strong>前一晚用飯店宅配把大行李寄到關空</strong>（當天輕裝）；或退房後寄放難波飯店櫃台，逛完回取。備援：南海難波站大型置物櫃、關空手荷物一時預かり。
+        </div>
+        <div class="photos">
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4_2024%281%29.jpg/1280px-%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4_2024%281%29.jpg" alt="黑門市場"><figcaption>黑門市場</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sumiyoshi-taisha%2C_keidai-2.jpg/1280px-Sumiyoshi-taisha%2C_keidai-2.jpg" alt="住吉大社"><figcaption>住吉大社・太鼓橋</figcaption></figure>
+          <figure><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Osaka_Dotonbori_Ebisu_Bridge.jpg/1280px-Osaka_Dotonbori_Ebisu_Bridge.jpg" alt="道頓堀"><figcaption>心齋橋・道頓堀</figcaption></figure>
         </div>
       </div>
     </section>
